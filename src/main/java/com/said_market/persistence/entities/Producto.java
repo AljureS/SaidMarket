@@ -1,11 +1,6 @@
 package com.said_market.persistence.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "productos")
@@ -31,7 +26,10 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estado;
-    
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)//En esa relacion no vamos a insertar una nueva categoria
+    private Categoria categoria;
 
     public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
