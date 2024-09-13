@@ -18,11 +18,11 @@ public class ComprasProducto {
 
     private Boolean estado;
 
-    @ManyToOne
+    @ManyToOne // many de esatas para una compra
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
-    @ManyToOne
+    @ManyToOne //mani ordener de compra para un producto
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 
