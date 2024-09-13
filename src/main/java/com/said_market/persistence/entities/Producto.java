@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "productos")
-public class Product {
+public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +31,7 @@ public class Product {
     private Integer cantidadStock;
 
     private Boolean estado;
+    
 
     public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;

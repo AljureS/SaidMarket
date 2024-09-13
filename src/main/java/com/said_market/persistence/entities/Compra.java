@@ -72,4 +72,6 @@ public class Compra {
     public void setMedioPago(String medioPago) {
         this.medioPago = medioPago;
     }
+
+
 }
