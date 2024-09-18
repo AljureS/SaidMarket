@@ -5,6 +5,7 @@ import com.said_market.domain.repository.ProductRepository;
 import com.said_market.persistence.crud.ProductoCrudRepository;
 import com.said_market.persistence.entities.Producto;
 import com.said_market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,10 @@ import java.util.Optional;
 
 @Repository //Se encarga de manipular la BD
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     @Override
@@ -49,7 +53,6 @@ public class ProductoRepository implements ProductRepository {
         List<Producto> productos = (List<Producto>) productoCrudRepository.findAllByOrderByPrecioVentaAsc();
         return mapper.toProducts(productos);
     }
-
 
     @Override
     public void delete (int productId){
