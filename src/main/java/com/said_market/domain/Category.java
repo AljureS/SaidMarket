@@ -28,4 +28,5 @@ public class Category {
     public void setActive(boolean active) {
         this.active = active;
     }
+
 }

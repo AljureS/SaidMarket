@@ -30,7 +30,7 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)//para que no se creeen nuevos clientes en este entidad
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra")
     private List<ComprasProducto> productos;
 
     public void setComentario(String comentario) {
@@ -77,5 +77,19 @@ public class Compra {
         this.medioPago = medioPago;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
 }

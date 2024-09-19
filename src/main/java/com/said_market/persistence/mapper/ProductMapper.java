@@ -18,7 +18,7 @@ public interface ProductMapper {
             @Mapping(source = "precioVenta", target = "price"),
             @Mapping(source = "cantidadStock", target = "stock"),
             @Mapping(source = "estado", target = "active"),
-            @Mapping(source = "categoria", target = "cateogory"),// Aca usa category mapper
+            @Mapping(source = "categoria", target = "category"),// Aca usa category mapper
 
     })
     Product toProduct(Producto producto);
