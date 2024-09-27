@@ -1,6 +1,6 @@
 package com.said_market.domain;
 
-public class Category {
+public class  Category {
     private int categoryId;
     private String category;
     private boolean active;
