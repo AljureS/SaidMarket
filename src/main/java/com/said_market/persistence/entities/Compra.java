@@ -30,7 +30,7 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)//para que no se creeen nuevos clientes en este entidad
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "compra")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL}) // estaba mappedBy "compra"
     private List<ComprasProducto> productos;
 
     public void setComentario(String comentario) {
@@ -92,4 +92,5 @@ public class Compra {
     public void setProductos(List<ComprasProducto> productos) {
         this.productos = productos;
     }
+
 }
