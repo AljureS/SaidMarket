@@ -15,13 +15,13 @@ public class PurchaseService {
     @Autowired
     private PurchaseRepository purchaseRepository;
 
-    List<Purchase> getAll() {
+    public List<Purchase> getAll() {
         return purchaseRepository.getAll();
     }
-    Optional<List<Purchase>> getByClient(String clientId){
+    public Optional<List<Purchase>> getByClient(String clientId){
         return purchaseRepository.getByClient(clientId);
     }
-    Purchase save (Purchase purchase){
+    public Purchase save (Purchase purchase){
         return purchaseRepository.save(purchase);
     }
 
