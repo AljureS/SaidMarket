@@ -21,13 +21,13 @@ public class CompraRepository implements PurchaseRepository {
 
     @Override
     public List<Purchase> getAll() {
-        return purchaseMapper.toPurchase((List<Compra>) compraCrudRepository.findAll());
+        return purchaseMapper.toPurchases((List<Compra>) compraCrudRepository.findAll());
     }
 
     @Override
     public Optional<List<Purchase>> getByClient(String clientId) {
         return compraCrudRepository.findByIdCliente(clientId)
-                .map(compras -> purchaseMapper.toPurchase(compras))
+                .map(compras -> purchaseMapper.toPurchases(compras))
                 ;
     }
 
