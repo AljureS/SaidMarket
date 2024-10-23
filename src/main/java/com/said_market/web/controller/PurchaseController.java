@@ -17,7 +17,7 @@ public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
 
-    @GetMapping("all")
+    @GetMapping("/all")
     public ResponseEntity<List<Purchase>> getAll() {
         return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK) ;
     }
@@ -29,7 +29,7 @@ public class PurchaseController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PostMapping("save")
+    @PostMapping("/save")
     public ResponseEntity<Purchase> save (@RequestBody Purchase purchase){
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
