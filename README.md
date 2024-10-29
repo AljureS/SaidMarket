@@ -21,8 +21,8 @@ Check out our **API Documentation** for detailed endpoints and usage:
 
 ## Data Base
 - SQL instructions for the Database, run in SQL Sheell terminal:
-https://drive.google.com/file/d/1DZTGB-BC3LqoZLN_UK8uyt4_eZP-MfBl/view
-https://drive.google.com/file/d/1MhNMwcxSvRYNfA8H3NjOtixSPM6Ovwaa/view
+- https://drive.google.com/file/d/1DZTGB-BC3LqoZLN_UK8uyt4_eZP-MfBl/view
+- https://drive.google.com/file/d/1MhNMwcxSvRYNfA8H3NjOtixSPM6Ovwaa/view
 
 ---
 
