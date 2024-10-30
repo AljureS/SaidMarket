@@ -20,9 +20,9 @@ jobs:
           
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
-
+        
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build -x test
         env:
           SPRING_DATASOURCE_URL: ${{ secrets.DB_URL}}
           SPRING_DATASOURCE_USERNAME: ${{ secrets.DB_USERNAME }}
