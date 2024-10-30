@@ -9,7 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SaidMarketApplication {
 
 	public static void main(String[] args) {
-		Dotenv dotenv = Dotenv.load();
+		Dotenv dotenv = Dotenv.configure()
+				.ignoreIfMissing() // Ignora si no encuentra el archivo .env
+				.load();
+		//Dotenv dotenv = Dotenv.load();
 
 		System.setProperty("spring.datasource.url", dotenv.get("DB_URL"));
 		System.setProperty("spring.datasource.username", dotenv.get("DB_USERNAME"));
