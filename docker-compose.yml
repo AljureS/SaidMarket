@@ -1,0 +1,31 @@
+services:
+  said-market:
+    build: ./
+    ports:
+      - "8080:3000"
+    env_file:
+      - .env
+    restart: always
+    depends_on:
+      super_market:
+        condition: service_healthy
+
+  super_market:
+    image: postgres:15.6
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./1_schema.sql:/docker-entrypoint-initdb.d/1_schema.sql
+      - ./2_data.sql:/docker-entrypoint-initdb.d/2_data.sql
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
