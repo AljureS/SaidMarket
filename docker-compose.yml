@@ -1,6 +1,7 @@
 services:
   said-market:
-    build: ./
+    image: saljure/said_market
+    #build: ./
     ports:
       - "8080:3000"
     env_file:
