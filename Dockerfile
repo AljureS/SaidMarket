@@ -7,14 +7,16 @@ WORKDIR /app
 # Copiar el archivo JAR desde el directorio de build local al contenedor
 COPY ./build/libs/said-market-1.0.jar /app/app_market.jar
 
-# Comando para verificar el contenido del directorio de trabajo (opcional, para diagnóstico)
-RUN ls -la
+# Copiar los archivos SQL al contenedor
+COPY ./1_schema.sql /app/1_schema.sql
+COPY ./2_data.sql /app/2_data.sql
+
+RUN apt-get update && apt-get install -y postgresql-client && rm -rf /var/lib/apt/lists/*
 
 # Exponer el puerto 8080 para la aplicación
 EXPOSE 8080
 
-# Configurar el comando para ejecutar la aplicación
-ENTRYPOINT ["java", "-jar", "app_market.jar"]
-
+# Comando de entrada para inicializar la base de datos y luego iniciar la aplicación
+ENTRYPOINT ["sh", "-c", "PGPASSWORD=$POSTGRES_PASSWORD psql -h $POSTGRES_HOST -U $POSTGRES_USER -d $POSTGRES_DB -f /app/1_schema.sql && PGPASSWORD=$POSTGRES_PASSWORD psql -h $POSTGRES_HOST -U $POSTGRES_USER -d $POSTGRES_DB -f /app/2_data.sql && java -jar app_market.jar"]
 
 
