@@ -101,13 +101,4 @@ DB_PASSWORD=your_db_password
 
 Replace `your_db_username` and `your_db_password` with your actual database credentials.
 
-## Data Base
-- SQL instructions for the Database, run in SQL Sheell terminal:
-- https://drive.google.com/file/d/1DZTGB-BC3LqoZLN_UK8uyt4_eZP-MfBl/view
-- https://drive.google.com/file/d/1MhNMwcxSvRYNfA8H3NjOtixSPM6Ovwaa/view
-
----
-
-## 🔒 Environment Variables
-
 
