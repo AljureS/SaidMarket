@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-slim
-COPY build/libs/ /app/libs/
-RUN ls -la /app/libs/
+WORKDIR /app
+RUN ls -la
 COPY build/libs/said-market-1.0.jar app_market.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app_market.jar"]
