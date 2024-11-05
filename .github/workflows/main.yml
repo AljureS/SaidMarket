@@ -28,7 +28,7 @@ jobs:
           SPRING_DATASOURCE_USERNAME: ${{ secrets.DB_USERNAME }}
           SPRING_DATASOURCE_PASSWORD: ${{ secrets.DB_PASSWORD }}
           
-      - name: List output files
+      - name: List output files in build/libs
         run: ls -l build/libs/
         
       - name: List JAR files
