@@ -9,7 +9,7 @@ Welcome to the **Said Market App Backend**! This application, built with **Sprin
 - 🛍️ **Product Management:** Add, update, delete, and list all products in the supermarket.
 - 📦 **Inventory Control:** Manage stock levels to ensure product availability.
 - 🧾 **Order Processing:** Create, update, and track customer orders.
-- 🐳 **Docker Image:** Available at `docker pull saljure/said_market:latest`.
+- 🐳 **Docker Image:** Available and updated by using GitHub Actions for CD at `docker pull saljure/said_market:latest`.
 
 ---
 
