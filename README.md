@@ -9,6 +9,7 @@ Welcome to the **Supermarket App Backend**! This app is built with **Spring Boot
 - 🛍️ **Product Management:** Add, update, delete, and list all products in the supermarket.
 - 📦 **Inventory Control:** Manage stock and ensure products are available.
 - 🧾 **Order Processing:** Create, update, and track customer orders.
+- Docker Image: docker pull saljure/said_market:latest
 
 ---
 
