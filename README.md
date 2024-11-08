@@ -1,4 +1,4 @@
-# 🛒 Said Market App Backend 📦
+# 🛒 Said Market Backend App📦
 
 Welcome to the **Said Market App Backend**! This application, built with **Spring Boot**, manages various supermarket operations, including product management and order processing. Follow the instructions below to set up and run the application using Docker. 🚀
 
